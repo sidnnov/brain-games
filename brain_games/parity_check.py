@@ -11,14 +11,20 @@ def welcome_user():
 
 def parity_check(name=welcome_user()):
     print('Answer "yes" if the number is even, otherwise answer "no".')
+
     for _ in range(3):
         num = random.randint(1, 100)
+        yes_or_no = ['yes', 'no'][num % 2]
         print(f'Question: {num}')
         answer = prompt.string('Your answer: ')
-        if (num % 2 == 0 and answer == 'yes') or (num % 2 != 0 and answer == 'no'):
+
+        if yes_or_no == answer:
             print('Correct!')
+
         else:
-            y_or_n = ['yes', 'no'][num % 2]
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "{y_or_n}".')
+            print(f'"{answer}" is wrong answer ;(.'
+                  f' Correct answer was "{yes_or_no}".')
+
             return f"Let's try again, {name}!"
+
     return f'Congratulations, {name}!'
