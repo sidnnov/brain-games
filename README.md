@@ -4,3 +4,4 @@
 #### My examples of games:
 * Parity check game -> https://asciinema.org/a/PU3ygUfzV1zHpvycDfAkFhJBh
 * Calculator game -> https://asciinema.org/a/vsGOAlBm8wzR1Yp2S3dyFweHA
+* Greatest common divisor -> https://asciinema.org/a/RnwTUZT66G4HWKQFGjD48OUfZ
