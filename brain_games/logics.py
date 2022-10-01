@@ -1,4 +1,5 @@
 import prompt
+import random
 
 
 def welcome_user():
@@ -6,6 +7,10 @@ def welcome_user():
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     return name
+
+
+def get_random_number(a, b):
+    return random.randint(a, b)
 
 
 def question(action):
