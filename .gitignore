@@ -1,4 +1,4 @@
 __pycache__/
 dist/
 .venv/
-games/my tests.py
+brain_games/games/my_tests.py
