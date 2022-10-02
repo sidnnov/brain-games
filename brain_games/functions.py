@@ -22,7 +22,7 @@ def get_answer_user():
     return answer
 
 
-def comparison_answers(answer_user, answer):
+def is_comparison_answers(answer_user, answer):
     if answer_user == answer:
         print('Correct!')
         return False
