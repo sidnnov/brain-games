@@ -5,7 +5,8 @@ from brain_games.functions import get_random_number, question
 
 def game_parity_check():
     name = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print('Answer "yes" if number even otherwise answer "no".')
+    # print('Answer "yes" if the number is even, otherwise answer "no".')
 
     for _ in range(3):
         num = get_random_number(1, 100)
@@ -17,4 +18,4 @@ def game_parity_check():
 
     return congratulations(name)
 
-# print(parity_check())
+# print(game_parity_check())
