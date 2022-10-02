@@ -1,16 +1,16 @@
-import prompt
-import random
+from prompt import string
+from random import randint
 
 
 def welcome_user():
     print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
+    name = string('May I have your name? ')
     print(f'Hello, {name}!')
     return name
 
 
 def get_random_number(a, b):
-    return random.randint(a, b)
+    return randint(a, b)
 
 
 def question(action):
@@ -18,7 +18,7 @@ def question(action):
 
 
 def get_answer_user():
-    answer = prompt.string('Your answer: ')
+    answer = string('Your answer: ')
     return answer
 
 
