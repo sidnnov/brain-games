@@ -17,12 +17,12 @@ def question(action):
     return f'Question: {action}'
 
 
-def get_answer():
+def get_answer_user():
     answer = prompt.string('Your answer: ')
     return answer
 
 
-def comparison(answer_user, answer):
+def comparison_answers(answer_user, answer):
     if answer_user == answer:
         print('Correct!')
         return False
