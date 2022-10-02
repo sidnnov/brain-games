@@ -2,8 +2,12 @@
 [![Actions Status](https://github.com/sidnnov/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/sidnnov/python-project-49/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/eee64bcfeffb6b6b3b78/maintainability)](https://codeclimate.com/github/sidnnov/python-project-49/maintainability)
 
-###Install hexlet-code
-----------------------
+### A little about the project:
+-------------------------------
+This is the educational project of the 1st module, the training program for Nehlet, the Python developer profession. Contains four games with similar logic.
+
+### Install hexlet-code
+-----------------------
 
 python 3.8+ is required to install hexlet-code. And also need poetry for the assembly of the project.
 
