@@ -1,4 +1,4 @@
-from brain_games.functions import try_again, welcome_user, comparison_answers
+from brain_games.functions import try_again, welcome_user, is_comparison_answers
 from brain_games.functions import congratulations, get_answer_user
 from brain_games.functions import get_random_number, question
 from random import choice
@@ -16,7 +16,7 @@ def game_calc():
         action = f'{num_1} {operation} {num_2}'
         print(question(action))
 
-        if comparison_answers(get_answer_user(), str(answer)):
+        if is_comparison_answers(get_answer_user(), str(answer)):
             return try_again(name)
 
     return congratulations(name)
