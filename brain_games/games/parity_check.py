@@ -1,6 +1,6 @@
-from brain_games.logics import try_again, welcome_user, comparison_answers
-from brain_games.logics import congratulations, get_answer_user
-from brain_games.logics import get_random_number, question
+from brain_games.functions import try_again, welcome_user, comparison_answers
+from brain_games.functions import congratulations, get_answer_user
+from brain_games.functions import get_random_number, question
 
 
 def game_parity_check():

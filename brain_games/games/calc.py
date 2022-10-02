@@ -1,7 +1,7 @@
-from brain_games.logics import try_again, welcome_user, comparison_answers
-from brain_games.logics import congratulations, get_answer_user
-from brain_games.logics import get_random_number, question
-import random
+from brain_games.functions import try_again, welcome_user, comparison_answers
+from brain_games.functions import congratulations, get_answer_user
+from brain_games.functions import get_random_number, question
+from random import choice
 
 
 def game_calc():
@@ -9,7 +9,7 @@ def game_calc():
     print('What is the result of the expression?')
 
     for _ in range(3):
-        operation = random.choice(['-', '+', '*'])
+        operation = choice(['-', '+', '*'])
         num_1 = get_random_number(1, 10)
         num_2 = get_random_number(1, 10)
         answer = eval(str(num_1) + operation + str(num_2))
