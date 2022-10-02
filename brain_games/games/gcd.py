@@ -1,8 +1,9 @@
-from brain_games.logics import try_again, welcome_user, comparison, question
-from brain_games.logics import congratulations, get_answer, get_random_number
+from brain_games.logics import try_again, welcome_user, comparison_answers
+from brain_games.logics import congratulations, get_answer_user
+from brain_games.logics import get_random_number, question
 
 
-def gcd(num_1, num_2):
+def get_gcd_answer(num_1, num_2):
     while num_1 != num_2:
         if num_1 > num_2:
             num_1 = num_1 - num_2
@@ -18,11 +19,11 @@ def game_gcd():
     for _ in range(3):
         num_1 = get_random_number(1, 100)
         num_2 = get_random_number(1, 100)
-        answer = gcd(num_1, num_2)
+        answer = get_gcd_answer(num_1, num_2)
         action = f'{num_1} {num_2}'
         print(question(action))
 
-        if comparison(get_answer(), str(answer)):
+        if comparison_answers(get_answer_user(), str(answer)):
             return try_again(name)
 
     return congratulations(name)
