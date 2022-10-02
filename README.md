@@ -6,3 +6,4 @@
 * Calculator game -> https://asciinema.org/a/vsGOAlBm8wzR1Yp2S3dyFweHA
 * Greatest common divisor -> https://asciinema.org/a/RnwTUZT66G4HWKQFGjD48OUfZ
 * Arithmetic progression -> https://asciinema.org/a/6RZBHIS8RiZQt571pI2YuoTWL
+* Is it a prime number? -> https://asciinema.org/a/xqEDDEIMOHi0d4Ptys2yVLVs6
