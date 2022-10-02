@@ -1,4 +1,4 @@
-from brain_games.functions import try_again, welcome_user, comparison_answers
+from brain_games.functions import try_again, welcome_user, is_comparison_answers
 from brain_games.functions import congratulations, get_answer_user
 from brain_games.functions import get_random_number, question
 
@@ -27,7 +27,7 @@ def game_arith_progress():
         progression, answer = get_progression_and_answer()
         print(question(progression))
 
-        if comparison_answers(get_answer_user(), answer):
+        if is_comparison_answers(get_answer_user(), answer):
             return try_again(name)
 
     return congratulations(name)
