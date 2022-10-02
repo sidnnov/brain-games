@@ -1,9 +1,10 @@
-from brain_games.logics import try_again, welcome_user, comparison, question
-from brain_games.logics import congratulations, get_answer, get_random_number
+from brain_games.logics import try_again, welcome_user, comparison_answers
+from brain_games.logics import congratulations, get_answer_user
+from brain_games.logics import get_random_number, question
 import random
 
 
-def calc():
+def game_calc():
     name = welcome_user()
     print('What is the result of the expression?')
 
@@ -15,7 +16,7 @@ def calc():
         action = f'{num_1} {operation} {num_2}'
         print(question(action))
 
-        if comparison(get_answer(), str(answer)):
+        if comparison_answers(get_answer_user(), str(answer)):
             return try_again(name)
 
     return congratulations(name)
