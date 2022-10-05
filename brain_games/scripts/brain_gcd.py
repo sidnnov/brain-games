@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.games.gcd import game_gcd
+from brain_games.games import gcd
+from brain_games.logic import start_game
 
 
 def main():
-    print(game_gcd())
+    print(start_game(gcd))
 
 
 if __name__ == '__main__':
