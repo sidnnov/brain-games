@@ -8,4 +8,4 @@ def get_task_and_answer():
     return task, correct_answer
 
 
-rules_of_the_game = 'Answer "yes" if number even otherwise answer "no".'
+rules_of_the_game = 'Answer "yes" if the number is even, otherwise answer "no".'
