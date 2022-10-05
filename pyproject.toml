@@ -7,6 +7,9 @@ readme = "README.md"
 packages = [
   { include = "brain_games" },
 ]
+classifiers = [
+    "Topic :: Games/Entertainment :: Real Time Strategy",
+]
 repository = "https://github.com/sidnnov/python-project-49"
 
 [tool.poetry.dependencies]
