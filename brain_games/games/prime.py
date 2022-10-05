@@ -15,5 +15,5 @@ def get_task_and_answer():
     return number, 'no'
 
 
-rules_of_the_game = 'Answer "yes" if given numberber is prime. \
+rules_of_the_game = 'Answer "yes" if given number is prime. \
 Otherwise answer "no".'
