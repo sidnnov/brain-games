@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.games.arithmetic_progression import game_arith_progress
+from brain_games.games import arithmetic_progression
+from brain_games.logic import start_game
 
 
 def main():
-    print(game_arith_progress())
+    print(start_game(arithmetic_progression))
 
 
 if __name__ == '__main__':
