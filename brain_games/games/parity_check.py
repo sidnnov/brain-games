@@ -1,21 +1,11 @@
-from brain_games.functions import try_again, welcome_user, is_comparison_answers
-from brain_games.functions import congratulations, get_answer_user
-from brain_games.functions import get_random_number, question
+from random import randint
 
 
-def game_parity_check():
-    name = welcome_user()
-    print('Answer "yes" if number even otherwise answer "no".')
-    # print('Answer "yes" if the number is even, otherwise answer "no".')
+def get_task_and_answer():
+    task = randint(1, 100)
+    correct_answer = ['yes', 'no'][task % 2]
 
-    for _ in range(3):
-        num = get_random_number(1, 100)
-        answer = ['yes', 'no'][num % 2]
-        print(question(num))
+    return task, correct_answer
 
-        if is_comparison_answers(get_answer_user(), answer):
-            return try_again(name)
 
-    return congratulations(name)
-
-# print(game_parity_check())
+rules_of_the_game = 'Answer "yes" if number even otherwise answer "no".'
