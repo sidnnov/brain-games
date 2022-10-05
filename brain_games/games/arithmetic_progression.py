@@ -1,36 +1,20 @@
-from brain_games.functions import try_again, welcome_user, is_comparison_answers
-from brain_games.functions import congratulations, get_answer_user
-from brain_games.functions import get_random_number, question
+from random import randint
 
 
-def get_progression_and_answer():
-    step = get_random_number(2, 30)
-    start_progression = get_random_number(1, 50)
-    index_answer = get_random_number(0, 9)
+def get_task_and_answer():
+    step = randint(2, 30)
+    start_progression = randint(1, 50)
+    index_answer = randint(0, 9)
     progression = [i for i in range(10)]
 
     for i in range(10):
         progression[i] = str(progression[i] + start_progression)
         start_progression += step
 
-    answer = progression[index_answer]
+    correct_answer = progression[index_answer]
     progression[index_answer] = '..'
 
-    return ' '.join(progression), answer
+    return ' '.join(progression), correct_answer
 
 
-def game_arith_progress():
-    name = welcome_user()
-    print('What number is missing in the progression?')
-
-    for _ in range(3):
-        progression, answer = get_progression_and_answer()
-        print(question(progression))
-
-        if is_comparison_answers(get_answer_user(), answer):
-            return try_again(name)
-
-    return congratulations(name)
-
-# print(game_arith_progress())
-# print(get_progression_and_answer())
+rules_of_the_game = 'What number is missing in the progression?'
