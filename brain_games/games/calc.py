@@ -1,24 +1,14 @@
-from brain_games.functions import try_again, welcome_user, is_comparison_answers
-from brain_games.functions import congratulations, get_answer_user
-from brain_games.functions import get_random_number, question
-from random import choice
+from random import randint, choice
 
 
-def game_calc():
-    name = welcome_user()
-    print('What is the result of the expression?')
+def get_task_and_answer():
+    operation = choice(['-', '+', '*'])
+    num_1 = randint(1, 10)
+    num_2 = randint(1, 10)
+    correct_answer = eval(str(num_1) + operation + str(num_2))
+    task = f'{num_1} {operation} {num_2}'
 
-    for _ in range(3):
-        operation = choice(['-', '+', '*'])
-        num_1 = get_random_number(1, 10)
-        num_2 = get_random_number(1, 10)
-        answer = eval(str(num_1) + operation + str(num_2))
-        action = f'{num_1} {operation} {num_2}'
-        print(question(action))
+    return task, str(correct_answer)
 
-        if is_comparison_answers(get_answer_user(), str(answer)):
-            return try_again(name)
 
-    return congratulations(name)
-
-# print(calc())
+rules_of_the_game = 'What is the result of the expression?'
