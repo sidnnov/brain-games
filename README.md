@@ -16,11 +16,40 @@ poetry build
 python3 -m pip install --user dist/*.whl
 ```
 
-[![asciicast](https://asciinema.org/a/iVJEUV9oJmYPhWBOLfxhYmN3G.svg)](https://asciinema.org/a/iVJEUV9oJmYPhWBOLfxhYmN3G)
+#### Description of the Make commands:
+```
+install:
+	poetry install
+
+build:
+	poetry build
+
+package-install:
+	python3 -m pip install --user dist/*.whl
+
+reinstall:
+	pip install --user --force-reinstall dist/*.whl
+
+lint: 
+	poetry run flake8 brain_games
+```
+
+#### Setup example:
+[![asciicast](https://asciinema.org/a/aJabawAlJeIfCBinHn2CEEnvy.svg)](https://asciinema.org/a/aJabawAlJeIfCBinHn2CEEnvy)
+
 
 #### My examples of games:
-* Parity check game -> https://asciinema.org/a/PU3ygUfzV1zHpvycDfAkFhJBh
-* Calculator game -> https://asciinema.org/a/vsGOAlBm8wzR1Yp2S3dyFweHA
-* Greatest common divisor -> https://asciinema.org/a/RnwTUZT66G4HWKQFGjD48OUfZ
-* Arithmetic progression -> https://asciinema.org/a/6RZBHIS8RiZQt571pI2YuoTWL
-* Is it a prime number? -> https://asciinema.org/a/xqEDDEIMOHi0d4Ptys2yVLVs6
+Parity check game 🡾
+[![asciicast](https://asciinema.org/a/PU3ygUfzV1zHpvycDfAkFhJBh.svg)](https://asciinema.org/a/PU3ygUfzV1zHpvycDfAkFhJBh)
+
+Calculator game 🡾
+[![asciicast](https://asciinema.org/a/vsGOAlBm8wzR1Yp2S3dyFweHA.svg)](https://asciinema.org/a/vsGOAlBm8wzR1Yp2S3dyFweHA)
+
+Greatest common divisor 🡾
+[![asciicast](https://asciinema.org/a/RnwTUZT66G4HWKQFGjD48OUfZ.svg)](https://asciinema.org/a/RnwTUZT66G4HWKQFGjD48OUfZ)
+
+Arithmetic progression 🡾
+[![asciicast](https://asciinema.org/a/6RZBHIS8RiZQt571pI2YuoTWL.svg)](https://asciinema.org/a/6RZBHIS8RiZQt571pI2YuoTWL)
+
+Is it a prime number? 🡾
+[![asciicast](https://asciinema.org/a/xqEDDEIMOHi0d4Ptys2yVLVs6.svg)](https://asciinema.org/a/xqEDDEIMOHi0d4Ptys2yVLVs6)
