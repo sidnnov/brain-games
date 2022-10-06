@@ -12,8 +12,9 @@ This is the educational project of the 1st module, the training program for Nehl
 python 3.8+ is required to install hexlet-code. And also need poetry for the assembly of the project.
 
 ```
-poetry build
-python3 -m pip install --user dist/*.whl
+$ poetry build
+
+$ python3 -m pip install --user dist/*.whl
 ```
 
 #### Description of the Make commands:
@@ -32,6 +33,19 @@ reinstall:
 
 lint: 
 	poetry run flake8 brain_games
+```
+
+#### Running games:
+```
+$ brain-even
+
+$ brain-calc
+
+$ brain-gcd
+
+$ brain-progression
+
+$ brain-prime
 ```
 
 #### Setup example:
