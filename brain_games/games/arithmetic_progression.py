@@ -1,20 +1,29 @@
 from random import randint
 
 
+LENGTH = 10
+MIN_STEP = 2
+MAX_STEP = 30
+MIN_START = 1
+MAX_START = 50
+MIN_INDEX_ANSWER = 0
+MAX_INDEX_ANSWER = 9
+RULES_OF_THE_GAME = 'What number is missing in the progression?'
+
+
+def get_progression():
+    step = randint(MIN_STEP, MAX_STEP)
+    start = randint(MIN_START, MAX_START)
+    stop = start + (LENGTH * step)
+    progression = [str(i) for i in range(start, stop, step)]
+    return progression
+
+
 def get_task_and_answer():
-    step = randint(2, 30)
-    start_progression = randint(1, 50)
-    index_answer = randint(0, 9)
-    progression = [i for i in range(10)]
+    progression = get_progression()
+    index_correct_answer = randint(MIN_INDEX_ANSWER, MAX_INDEX_ANSWER)
+    correct_answer = progression[index_correct_answer]
+    progression[index_correct_answer] = '..'
+    task = ' '.join(progression)
 
-    for i in range(10):
-        progression[i] = str(progression[i] + start_progression)
-        start_progression += step
-
-    correct_answer = progression[index_answer]
-    progression[index_answer] = '..'
-
-    return ' '.join(progression), correct_answer
-
-
-rules_of_the_game = 'What number is missing in the progression?'
+    return task, correct_answer
