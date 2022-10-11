@@ -1,14 +1,30 @@
 from random import randint, choice
 
 
+MIN_NUMBER = 1
+MAX_NUMBER = 10
+RULES_OF_THE_GAME = 'What is the result of the expression?'
+
+
+def get_answer(first_nember, second_number, operation):
+
+    if operation == '-':
+        answer = first_nember - second_number
+
+    elif operation == '+':
+        answer = first_nember + second_number
+
+    elif operation == '*':
+        answer = first_nember * second_number
+
+    return answer
+
+
 def get_task_and_answer():
+    first_nember = randint(MIN_NUMBER, MAX_NUMBER)
+    second_number = randint(MIN_NUMBER, MAX_NUMBER)
     operation = choice(['-', '+', '*'])
-    num_1 = randint(1, 10)
-    num_2 = randint(1, 10)
-    correct_answer = eval(str(num_1) + operation + str(num_2))
-    task = f'{num_1} {operation} {num_2}'
+    correct_answer = get_answer(first_nember, second_number, operation)
+    task = f'{first_nember} {operation} {second_number}'
 
     return task, str(correct_answer)
-
-
-rules_of_the_game = 'What is the result of the expression?'
