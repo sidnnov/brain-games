@@ -1,17 +1,26 @@
-from brain_games.functions import welcome_user, is_comparison_answers
 from prompt import string
 
 
-def start_game(game):
-    name = welcome_user()
-    print(game.rules_of_the_game)
+REPEAT = 3
 
-    for _ in range(3):
+
+def start_game(game):
+    print('Welcome to the Brain Games!')
+    name = string('May I have your name? ')
+    print(f'Hello, {name}!')
+    print(game.RULES_OF_THE_GAME)
+
+    for _ in range(REPEAT):
         task, correct_answer = game.get_task_and_answer()
         print(f'Question: {task}')
         answer_user = string('Your answer: ')
 
-        if is_comparison_answers(answer_user, correct_answer):
+        if answer_user == correct_answer:
+            print('Correct!')
+
+        else:
+            print(f'"{answer_user}" is wrong answer ;(. '
+                  f'Correct answer was "{correct_answer}".')
             return f"Let's try again, {name}!"
 
     return f'Congratulations, {name}!'
