@@ -1,19 +1,16 @@
 from random import randint
+from math import gcd
+
+
+MIN_NUMBER = 1
+MAX_NUMBER = 100
+RULES_OF_THE_GAME = 'Find the greatest common divisor of given numbers.'
 
 
 def get_task_and_answer():
-    num_1 = randint(1, 100)
-    num_2 = randint(1, 100)
-    task = f'{num_1} {num_2}'
-
-    while num_1 != num_2:
-        if num_1 > num_2:
-            num_1 = num_1 - num_2
-        else:
-            num_2 = num_2 - num_1
-    correct_answer = num_1
+    first_nember = randint(MIN_NUMBER, MAX_NUMBER)
+    second_nember = randint(MIN_NUMBER, MAX_NUMBER)
+    task = f'{first_nember} {second_nember}'
+    correct_answer = gcd(first_nember, second_nember)
 
     return task, str(correct_answer)
-
-
-rules_of_the_game = 'Find the greatest common divisor of given numbers.'
