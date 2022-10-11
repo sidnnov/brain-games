@@ -1,19 +1,30 @@
 from random import randint
 
 
-def get_task_and_answer():
-    number = randint(1, 31)
-    counter = 0
+MIN_NUMBER = 1
+MAX_NUMBER = 31
+RULES_OF_THE_GAME = 'Answer "yes" if given number is prime. \
+Otherwise answer "no".'
 
+
+def is_prime_number(number):
+    counter = 0
     for i in range(2, number + 1):
         if number % i == 0:
             counter += 1
+        if counter > 1:
+            break
 
     if counter == 1:
-        return number, 'yes'
+        return True
 
-    return number, 'no'
+    return False
 
 
-rules_of_the_game = 'Answer "yes" if given number is prime. \
-Otherwise answer "no".'
+def get_task_and_answer():
+    number = randint(MIN_NUMBER, MAX_NUMBER)
+    result = is_prime_number(number)
+    correct_answer = ['no', 'yes'][result]
+    taks = number
+
+    return taks, correct_answer
