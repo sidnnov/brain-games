@@ -21,10 +21,10 @@ def get_answer(first_nember, second_number, operation):
 
 
 def get_task_and_answer():
-    first_nember = randint(MIN_NUMBER, MAX_NUMBER)
+    first_number = randint(MIN_NUMBER, MAX_NUMBER)
     second_number = randint(MIN_NUMBER, MAX_NUMBER)
     operation = choice(['-', '+', '*'])
-    correct_answer = get_answer(first_nember, second_number, operation)
-    task = f'{first_nember} {operation} {second_number}'
+    correct_answer = get_answer(first_number, second_number, operation)
+    task = f'{first_number} {operation} {second_number}'
 
     return task, str(correct_answer)
