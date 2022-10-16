@@ -8,17 +8,14 @@ Otherwise answer "no".'
 
 
 def is_prime_number(number):
-    counter = 0
-    for i in range(2, number + 1):
+    if number < 2:
+        return False
+
+    for i in range(2, (number // 2) + 1):
         if number % i == 0:
-            counter += 1
-        if counter > 1:
-            break
+            return False
 
-    if counter == 1:
-        return True
-
-    return False
+    return True
 
 
 def get_task_and_answer():
