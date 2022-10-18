@@ -14,6 +14,6 @@ def get_task_and_answer():
     number = randint(MIN_NUMBER, MAX_NUMBER)
     result = is_even(number)
     correct_answer = ['yes', 'no'][result]
-    task = number
+    task = str(number)
 
     return task, correct_answer

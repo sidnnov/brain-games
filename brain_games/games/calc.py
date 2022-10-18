@@ -10,10 +10,8 @@ def get_answer(first_nember, second_number, operation):
 
     if operation == '-':
         answer = first_nember - second_number
-
     elif operation == '+':
         answer = first_nember + second_number
-
     elif operation == '*':
         answer = first_nember * second_number
 
@@ -24,7 +22,7 @@ def get_task_and_answer():
     first_number = randint(MIN_NUMBER, MAX_NUMBER)
     second_number = randint(MIN_NUMBER, MAX_NUMBER)
     operation = choice(['-', '+', '*'])
-    correct_answer = get_answer(first_number, second_number, operation)
+    correct_answer = str(get_answer(first_number, second_number, operation))
     task = f'{first_number} {operation} {second_number}'
 
-    return task, str(correct_answer)
+    return task, correct_answer
