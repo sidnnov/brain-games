@@ -4,7 +4,7 @@
 
 ### A little about the project:
 -------------------------------
-This is the educational project of the 1st module, the training program for Nehlet, the Python developer profession. Contains four games with similar logic.
+This is the educational project of the 1st module, the training program for Nehlet, the Python developer profession. Contains five games with similar logic.
 
 ### Install hexlet-code
 -----------------------
